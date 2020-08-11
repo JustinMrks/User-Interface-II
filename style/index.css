@@ -25,6 +25,15 @@ header{
     background-color: #537791;
     align-items: center;
 }
+.visually-hidden {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
 nav{
     display: flex;
     align-items: center;
@@ -65,7 +74,7 @@ div.backgroundImage{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin:1% auto;
+    margin:2% 2%;
     position: relative;
 }
 div.inside{
@@ -95,7 +104,7 @@ h2{
 #projects{
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 .project{
     width: 30%;
@@ -128,3 +137,63 @@ footer a:hover{
     background:#537791;
     border:1px solid #f7f6e7;
 }
+
+/*media scaling for tablets*/
+@media (max-width:800px){
+    nav{
+        width: 70%;
+    }
+}
+
+
+
+/*media scaling for cell phones*/
+@media (max-width:500px){
+    header{
+        flex-direction: column;
+        height:28vh;
+        justify-content: center;
+    }
+    header nav{
+        flex-direction: column;
+        padding:1% auto;
+    }
+    nav a{
+        width: 60%;
+        text-align: center;
+        text-decoration: none;
+        border:1px solid #c1c0b9;
+        background:#f7f6e7;
+        padding:1%;
+        color:#537791;
+        transition:.3s;
+    }
+    nav a:hover{
+        width: 60%;
+        text-align: center;
+        text-decoration: none;
+        border:1px solid #f7f6e7;
+        background:#537791;
+        padding:1%;
+        color:#f7f6e7;
+    }
+    .project{
+        width: 47%;
+        margin: 1%;
+    }
+    footer a{
+        text-align:center;
+        margin:2%;
+        padding: 1%;
+        background: #f7f6e7;
+        text-decoration: none;
+        color: #537791;
+        transition:.3s;
+    }
+    footer a:hover{
+        color:#f7f6e7;
+        background:#537791;
+        border:1px solid #f7f6e7;
+    }
+}
+
